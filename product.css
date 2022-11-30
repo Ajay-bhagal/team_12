@@ -1,0 +1,173 @@
+
+*{
+    font-family: 'Anek Devanagari', sans-serif;
+}
+#first-Section{
+    font-family: 'Anek Devanagari', sans-serif;
+    font-size: 12px;;
+}
+#first-Section> h1{
+    font-size: 40px;
+}
+
+#first-Section> p>a{
+    text-decoration: none;
+    font-size: 15px;
+    color:black;
+}
+#Sorting{
+    text-align: right;
+}
+
+#Sorting label{
+    font-size: 16px;
+}
+#Sorting select{
+    width:200px;
+    height:40px;
+    font-size: 14px;
+    
+}
+#Categorization{
+    display:table-row;
+    position: relative;
+    
+}
+.filter{
+    border-style:none;
+    font-weight:600;
+    font-size: 15px;
+    width:250px;
+    height:40px;
+    border-bottom:groove 0.5px;
+    border-color:whitesmoke;
+}
+#Product_Section{
+    display: grid;
+    grid-template-columns: 25% 75%;
+    padding:1%;
+    justify-content: center;
+    margin-top:20px;
+}
+#parent{
+    
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:15px;
+    width:100%;
+}
+
+#parent>div{
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    cursor:pointer;
+}
+#parent >div:hover{
+    transform: scale(1.1);
+    background-color:white;
+}
+#Product_image{
+    width:100%;
+    height:300px;
+    
+}
+
+#parent>div>div{
+    display:flex;
+    justify-content: space-around;
+}
+#Product_price{
+    color:darkred;
+    margin-left:15px;
+    margin-top:5px;
+    font-family: 'Anek Devanagari', sans-serif;
+}
+#rating_image{
+    width:100px;
+    height:25px;
+    margin-top:-10px;
+    margin-left:0px;
+    
+}
+#rating{
+    margin-top:-5px;
+    margin-left:-15px;
+    color:darkslategrey;
+}
+
+#Product_details{
+    text-decoration: none;
+    color:darkslategrey;
+    margin-top:-5px;
+    margin-left:100px;
+    font-family: 'Anek Devanagari', sans-serif;
+}
+
+#Product_name{
+    margin-left:15px;
+    margin-top:0px;
+    color:darkslategrey;
+    font-size: 12px;
+    font-family: 'Anek Devanagari', sans-serif;
+    letter-spacing:0.5px;
+    width:270px;
+}
+#wishlist{
+    
+position: absolute;
+z-index: 2;
+margin-left:270px;
+margin-top:10px;
+width:30px;
+height:30px;
+border-radius: 50%;
+background-color: rgba(245, 245, 245, 0.87);
+border-color: black;
+align-items: center;
+
+}
+#Page_Scroller{
+    display: flex;
+    margin-left:40%;
+    margin-top:30px;
+}
+.page{
+padding:0px 35px;
+font-size: 18px;
+margin-top:-0px;
+font-family: 'Anek Devanagari', sans-serif;
+color:brown;
+}
+
+#first_page{
+width:30px;
+height:30px;
+border-radius: 50%;
+background-color: white;
+color:black;
+font-weight: bolder;
+}
+
+#offers_section{
+    margin-left: 340px;
+    margin-top:50px;
+}
+
+#offers_section> img{
+   margin-left:10px;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+}
+
+#Experience_Section{
+    margin-left: 580px;
+    margin-top:70px;
+}
+
+#Experience_Section>p {
+    font-family: 'Anek Devanagari', sans-serif;
+    font-size:20px;
+}
+
+#emoticon{
+    font-size: 40px;
+    padding-left:30px
+}
