@@ -86,7 +86,8 @@
       text-decoration: none solid rgb(84, 86, 88);
    }  
     #product3>div {
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
    }
     #product3>h1{
       text-align: center;
@@ -126,7 +127,8 @@
       cursor: pointer;
    }
     #product4>div{
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
    }
     #product4>h1{
       text-align: center;
@@ -154,6 +156,7 @@
    }
     #product5>div{
       display: flex;
+      
    }
     #product5>h1{
       text-align: center;
@@ -219,18 +222,8 @@
       font-family: Arial, Helvetica, sans-serif;
       
    }
-   /* @media only screen and (min-width:0px) and (max-width:720px){
-     .child1>div{
-         grid-template-columns: repeat(3,40px);
-         
-      }
-      #childp{
-         grid-template-columns: repeat(4,1fr);
-      }
-
-   } */
-
-   @media only screen and (min-width:561px) and (max-width:700px){
+   
+   @media only screen and (min-width:461px) and (max-width:700px){
 
       #product1>div{
        
@@ -238,14 +231,67 @@
          gap:20px;
          
       }
+      #brand{
+         grid-template: repeat(2,1fr);
+         gap: 20px ;
+      }
+      #product2>div{
+         
+         grid-template-columns: repeat(3,1fr);
+         gap: 20px;
+
+
+      }
+      #product3>div {
+         
+         grid-template-columns: repeat(2,1fr);
+         gap: 20px;
+      }
+      #product4>div{
+         
+         grid-template-columns: repeat(2,1fr);
+         gap: 20px;
+      }
+      #lasthd{
+         
+         grid-template-columns: repeat(2,1fr);
+         gap: 20px;
+      }
+
    }
-   @media only screen and (min-width:0px) and (max-width: 560px){
+   @media only screen and (min-width:0px) and (max-width:460px){
            
       #product1>div{
          
-         grid-template-columns: repeat(1,1fr);
+         grid-template-columns: repeat(2,1fr);
          gap:20px;
         
+      }
+      #brand{
+         grid-template: repeat(1,1fr);
+         gap: 20px ;
+      }
+      #product2>div{
+         
+         grid-template-columns: repeat(2,1fr);
+         gap: 20px;
+
+
+      }
+      #product3>div {
+         
+         grid-template-columns: repeat(1,1fr);
+         gap: 20px;
+      }
+      #product4>div{
+         
+         grid-template-columns: repeat(1,1fr);
+         gap: 20px;
+      }
+      #lasthd{
+         
+         grid-template-columns: repeat(1,1fr);
+         gap: 20px;
       }
    }
 
