@@ -107,7 +107,7 @@
 
 <script type="module">
      
-  import { navigation, Footer } from "./JS/Landing.js"
+  import { navigation, Footer } from ""
 
 
   let l=navigation()
@@ -175,7 +175,7 @@ function login(event) {
   let arr = JSON.parse(localStorage.getItem("userDataBase"));
   if (email == "admin" && password == "admin") {
     alert("Admin User!!!");
-    window.location.href = "index.html";
+    window.location.href = "";
   } else {
     for (let i = 0; i < arr.length; i++) {
       if (
@@ -192,7 +192,7 @@ function login(event) {
         
         alert('Login Success');
         setTimeout(()=>{
-window.location.href = "/index.html"
+window.location.href = ""
         },1000)
         
         break;
@@ -204,11 +204,11 @@ window.location.href = "/index.html"
   }
 }
 document.querySelector(".dropbtn").addEventListener("click", function(){
-    window.location.href="/furniture.html"
+    window.location.href=""
   })
 
 document.querySelector("#home").addEventListener("click", function(){
-    window.location.href="/index.html"
+    window.location.href=""
   })
 
     //search 
@@ -218,7 +218,7 @@ let value=document.getElementById("searchbox").value.toLowerCase()
 if(value.length!=0){
 search.push(value)
 localStorage.setItem("search",JSON.stringify(search))
-window.location.href="/search.html"
+window.location.href=""
 }
 
 })
