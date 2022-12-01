@@ -5,7 +5,9 @@
 top: 10px; left: 20px;}
 #main>img{width: 100%;}
     #product1>h1{color: #2f3337;}
-    #product1>div{display: flex;}
+    #product1>div{display: grid;
+   grid-template-columns: repeat(6,0.5fr);}
+   .child1 img{width: 100%;}
     #product1{text-align: center; }
     .child1 div{margin: 10px;}
     .pic{position: relative;}
