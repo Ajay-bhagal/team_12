@@ -12,27 +12,27 @@
     <div id="navbar">
 
     </div>
-    <div id="container">
+    <div id="Shell">
          
         <!-- // create account part-------- -->
 
-        <div id="left">
+        <div id="leftSide">
             <div id="create-account">
                 <form id="form1">
                     <h1>Create Account</h1><br>
                     <label for="">Email Address*</label>
                     <input type="email" name="Email" id="email" placeholder="Email"><br><br>
-                    <div class="password-box"">
+                    <div class="password-box">
                         <div >
                             <label for="">Create Password*</label><br><br>
-                            <input type="text" name="password" id="create-pass" placeholder="Password"><br>
+                            <input type="text" name="password" id="create-password" placeholder="Password"><br>
                         </div><br>
                         <div>
                             <label for="">Confirm Password*</label><br><br>
                             <input type="text" name="" id="confirm-pass" placeholder="Confirm Password">
                         </div><br>
                     </div>
-                    <div id="message">
+                    <div id="Msg">
                         <input type="checkbox" id="checkbox">
                         <span>
                             Sign up today for the exclusive offers from overstock.com delievered right to your inbox**
@@ -107,7 +107,7 @@
 
 <script type="module">
      
-  import { navigation, Footer } from "./JS/Landing.js"
+  import { navigation, Footer } from ""
 
 
   let l=navigation()
@@ -165,11 +165,8 @@ function signUp(event) {
   }
   
 }
-
 //  signin part start
  document.querySelector("#form2").addEventListener("submit", login);
-// let flag = false;
-// let isLogin = localStorage.getItem("isLogin") || false;
 function login(event) {
   event.preventDefault();
   let email = document.querySelector("#sign-in-email").value;
@@ -178,7 +175,7 @@ function login(event) {
   let arr = JSON.parse(localStorage.getItem("userDataBase"));
   if (email == "admin" && password == "admin") {
     alert("Admin User!!!");
-    window.location.href = "index.html";
+    window.location.href = "";
   } else {
     for (let i = 0; i < arr.length; i++) {
       if (
@@ -195,7 +192,7 @@ function login(event) {
         
         alert('Login Success');
         setTimeout(()=>{
-window.location.href = "/index.html"
+window.location.href = ""
         },1000)
         
         break;
@@ -203,30 +200,15 @@ window.location.href = "/index.html"
     }
     if (flag == false) {
       alert("unregistered user");
-      
-     // isLogin = false;
-     // localStorage.setItem("isLogin", "false");
     } 
-   // else {
-    //   console.log("registered user");
-    //   document.querySelector("#username").value = "";
-    //   document.querySelector("#password").value = "";
-    //   alert("Login Successful!!!");
-    //   isLogin = true;
-    //   localStorage.setItem("isLogin", "true");
-    //   window.location.href = "Landing.html";
-    // }
   }
 }
-
-
-
 document.querySelector(".dropbtn").addEventListener("click", function(){
-    window.location.href="/furniture.html"
+    window.location.href=""
   })
 
 document.querySelector("#home").addEventListener("click", function(){
-    window.location.href="/index.html"
+    window.location.href=""
   })
 
     //search 
@@ -236,7 +218,7 @@ let value=document.getElementById("searchbox").value.toLowerCase()
 if(value.length!=0){
 search.push(value)
 localStorage.setItem("search",JSON.stringify(search))
-window.location.href="/search.html"
+window.location.href=""
 }
 
 })
