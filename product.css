@@ -160,11 +160,13 @@ font-weight: bolder;
 #Experience_Section{
     margin-left: 580px;
     margin-top:70px;
+    margin-bottom:70px;
 }
 
 #Experience_Section>p {
     font-family: 'Anek Devanagari', sans-serif;
     font-size:20px;
+
 }
 
 #emoticon{

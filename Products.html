@@ -5,6 +5,7 @@
     <meta name="viewport">
     <title>Overstock.com | The Best Deals Online: Furniture, Bedding, Rugs, Kitchen Essentials & More</title>
     <link href="product.css" rel="stylesheet" />
+    <link href="footer.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/34bcab5945.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -122,7 +123,60 @@
             </div>
         </div>
         
-<div id="Footer_Section"></div>
+<div id="Footer_Section">
+    <div id="footer_menu">
+        <div>
+            <h4>MY ACCOUNT </h4>
+        <p><a href="">Orders & Returns</a></p>
+    <p><a href="">Email Preferences</a></p>
+<p> <a href=""> Account Settings</a></p>
+            
+        </div>
+        <div >
+            <h4>LET US HELP  </h4>
+           <p><a href=""><p></p>Contact Customer Care
+        </a></p>
+        <p><a href="">Shipping Information</a></p>
+        <p><a href="">Return Policy </a></p>
+    <p> <a href="">International Help </a></p>
+<p><a href="">Accessibility</a></p>
+            
+        </div>
+        <div>
+            <h4> COMPANY INFORMATION</h4>
+        <p><a href="">About Overstock™</a></p>
+        <p><a href="">Contact Us</a></p>
+    <p><a href="">Careers</a></p>
+<p><a href="">Investor Relations </a></p>
+<p> <a href="">Sell Your Products</a></p>
+<p><a href="">Supply Chain Transparency</a></p>
+            
+        </div>
+        <div>
+            <h4>MORE WAYS TO SHOP</h4>
+        <p> <a href="">Tips & Ideas</a></p>
+    <p><a href="">Deals</a></p>
+<p> <a href="">Clearance </a></p>
+<p> <a href="">New Arrivals</a></p>
+            
+        </div>
+        
+    </div>
+
+    <div id="footer_copyright">
+        <div id="copyrights">
+        <span>© Copyright 2022, Overstock.com®, Inc.</span><br>
+        <p style="margin-top:5px;"> 799 Coliseum Way Midvale, UT 84047 | 1-800-843-2446</p>
+    </div>
+    <div id="copyright_menu">
+        <p id="cmenu"><a href="">Privacy Policy</a></p>
+        <p id="cmenu"><a href="">Terms & Conditions</a></p>
+        <p id="cmenu"><a href="">*Promotion Terms</a></p>
+        <p id="cmenu" style="margin-top:15px;"><a href="">Ship to: <img src="https://ak1.ostkcdn.com/img/mxc/intFlag_IN.gif" id="flag"/></a></p>
+      
+    </div>
+</div>
+</div>
 </body>
 </html>
 <script>
@@ -523,26 +577,21 @@ function handleSorting()
 
     else if(Selected==="Price_LH"){
         product.sort(function(a,b){
-         a.fprice-b.fprice;
+         return a.fprice-b.fprice;
     });
 }
 
     else if(Selected==="Price_HL"){
         product.sort(function(a,b){
-         b.fprice-a.fprice;
+         return b.fprice-a.fprice;
     });
     }
 
     else if(Selected==="Customer_Rating"){
         product.sort(function(a,b){
-         if(a.rating<b.ratinge){
-         return 1;
-            }
-
-            if(a.rating<b.rating){
-                return -1;
-            }
-            return 0;
+            return b.rating-a.rating;
+        
+            
         });
     }
     
@@ -568,7 +617,7 @@ function productList(list_product){
         img.setAttribute("alt",elem.name);
         img.setAttribute("id","Product_image");
         img.addEventListener("click",()=>{
-            localStorage.setItem("product_data",JSON.stringify(data));
+            localStorage.setItem("product_data",JSON.stringify(elem));
             location.href="productDetails.html";
         })
          
