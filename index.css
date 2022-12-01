@@ -1,17 +1,16 @@
 
    #main{
-      position: relative;
+   
+      width:100%;
    }
    .parentpic:hover{
       cursor:pointer
    }
-   .parentpic{
-      position: absolute;
-      top: 10px; left: 20px;
-   }
-   #main>img{
+    .parentpic{
+      
       width: 100%;
-   }
+   } 
+   
    #product1>h1{
       color: #2f3337;
       font-family:Arial, Helvetica, sans-serif }
@@ -54,14 +53,12 @@
       margin-top: 6%;
    }
     #main2{
-      position: relative;
-   }
-    #main2>img{
+      
       width: 100%;
    }
+    
     .main2pic{
-      position: absolute;
-      top: 5px; left: 10px;
+      width: 100%;
    }
     .main2pic:hover{ 
       cursor: pointer;
@@ -119,16 +116,12 @@
       font-weight: 400;
    }
      #main3{
-      position: relative;
-      margin-top: 6%;
-   }
-     .main3pic{
-      position: absolute;
-      top: 5px; left: 10px;
-   }
-    #main3>img{
       width: 100%;
    }
+     .main3pic{
+     width: 100%;
+   }
+    
     .main3pic:hover{
       cursor: pointer;
    }
@@ -226,12 +219,37 @@
       font-family: Arial, Helvetica, sans-serif;
       
    }
-   @media only screen and (min-width:0px) and (max-width:720px){
-     .child1{
-         grid-template-columns: repeat(3,1fr);
+   /* @media only screen and (min-width:0px) and (max-width:720px){
+     .child1>div{
+         grid-template-columns: repeat(3,40px);
          
       }
       #childp{
          grid-template-columns: repeat(4,1fr);
       }
+
+   } */
+
+   @media only screen and (min-width:561px) and (max-width:700px){
+
+      #product1>div{
+       
+         grid-template-columns: repeat(3,1fr);
+         gap:20px;
+         
+      }
    }
+   @media only screen and (min-width:0px) and (max-width: 560px){
+           
+      #product1>div{
+         
+         grid-template-columns: repeat(1,1fr);
+         gap:20px;
+        
+      }
+   }
+
+
+
+   
+
