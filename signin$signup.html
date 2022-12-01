@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account</title>
+    <link rel="stylesheet" href="singin&signup.css">
+</head>
+
+<body>
+    <div id="navbar">
+
+    </div>
+    <div id="container">
+         
+        <!-- // create account part-------- -->
+
+        <div id="left">
+            <div id="create-account">
+                <form id="form1">
+                    <h1>Create Account</h1><br>
+                    <label for="">Email Address*</label>
+                    <input type="email" name="Email" id="email" placeholder="Email"><br><br>
+                    <div class="password-box"">
+                        <div >
+                            <label for="">Create Password*</label><br><br>
+                            <input type="text" name="password" id="create-pass" placeholder="Password"><br>
+                        </div><br>
+                        <div>
+                            <label for="">Confirm Password*</label><br><br>
+                            <input type="text" name="" id="confirm-pass" placeholder="Confirm Password">
+                        </div><br>
+                    </div>
+                    <div id="message">
+                        <input type="checkbox" id="checkbox">
+                        <span>
+                            Sign up today for the exclusive offers from overstock.com delievered right to your inbox**
+                        </span>
+                    </div>
+                    
+                    <input type="submit" id="create-btn" value="Create Account">
+                    <hr id="line">
+                    <input type="button" id="guest" value="Continue as Guest"><br><br>
+                    <div id="form-footer">
+                        By creating an account or continuing as a Guest, you agree to our
+                        <span>
+                            <input type="button" class="btn-underline" value="Terms & Conditions">
+                            and
+                            <input type="button" class="btn-underline" value="Privacy Policy.">
+                        </span><br><br>
+                        <span>
+                            <input type="button" class="btn-underline" value="Terms & Conditions">
+                            |
+                            <input type="button" class="btn-underline" value="Privacy Policy."><br>
+                            **you can unsubscribe any time
+                            
+                        </span>
+                    </div>
+                </form>   
+            </div>
+        </div>
+
+        <!-- // middle line -->
+
+        <div id="mid-line"></div>
+        
+        <!-- // sign-in part--------- -->
+
+        <div id="right">
+            <div id="sign-in">
+                <form id="form2">
+                    <h1>Sign In</h1><br>
+                    <label for="">Email Address*</label>
+                    <input type="email" name="Email" id="sign-in-email" placeholder="Email"><br><br>
+                    <label id="label-pass">Password*</label>
+                    <input type="text" name="password" id="password" placeholder="Password">
+                    <input type="submit" id="sign-in-btn" value="Sign In"><br><br>
+                    <input type="button" id="forgot" value="Forgot your Password?">
+                </form>
+            </div>
+        </div>
+    </div>
+
+<!--  end footer   -->
+
+    <div id="end-footer">
+        <div>Return Policy</div>
+        <div>Contact Customer Care</div>
+        <div>FAQ</div>
+        <div>Privacy Policy</div>
+        <div>Site User Terms & Conditions*</div>
+        <div>© 2022 Overstock.com All Rights Reserved</div>
+        <div>We self-certify compliance with:</div>
+        <img src="https://ak1.ostkcdn.com/img/mxc/20200630-intl-privacy_shield.png"></img>
+    </div>
+<!-- footer -->
+    
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+    <div id="footer"></div>
+</body>
+</html>
+
+<script type="module">
+     
+  import { navigation, Footer } from "./JS/Landing.js"
+
+
+  let l=navigation()
+document.getElementById("navbar").innerHTML=l
+let f=Footer()
+document.getElementById("footer").innerHTML=f
+
+
+     document.querySelector("#form1").addEventListener("submit", signUp);
+var userDataBase = JSON.parse(localStorage.getItem("userDataBase")) || [];
+var flag = false;
+   let username= JSON.parse(localStorage.getItem("username"))||[];
+
+
+function signUp(event) {
+  
+ event.preventDefault();
+ console.log(1)
+  let email = document.querySelector("#email").value;
+  let c_password = document.querySelector("#create-pass").value;
+  let password = document.querySelector("#confirm-pass").value;
+//   localStorage.setItem("userName", username);
+  let userData = {
+    userEmail: email,
+    user_c_password: c_password,
+    userPassword: password,
+  };
+  if (userDataBase.length != 0) {
+    let arr = JSON.parse(localStorage.getItem("userDataBase")) || [];
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i].userEmail === email) {
+        flag = true;
+        break;
+      }
+    }
+    if (flag) {
+      alert("user already exists!!!");
+    } else {
+      userDataBase.push(userData);
+      localStorage.setItem("userDataBase", JSON.stringify(userDataBase));
+      alert("Signup Successful!!!");
+      window.location.href = "#";
+      document.querySelector("#email").value = "";
+      document.querySelector("#create-pass").value = "";
+      document.querySelector("#confirm-pass").value = "";
+    }
+  } else {
+    userDataBase.push(userData);
+    localStorage.setItem("userDataBase", JSON.stringify(userDataBase));
+    alert("Signup Successful!!!");
+    window.location.href = "#";
+    document.querySelector("#email").value = "";
+    document.querySelector("#create-pass").value = "";
+    document.querySelector("#confirm-pass").value = "";
+  }
+  
+}
+
+//  signin part start
+ document.querySelector("#form2").addEventListener("submit", login);
+// let flag = false;
+// let isLogin = localStorage.getItem("isLogin") || false;
+function login(event) {
+  event.preventDefault();
+  let email = document.querySelector("#sign-in-email").value;
+  let password = document.querySelector("#password").value;
+
+  let arr = JSON.parse(localStorage.getItem("userDataBase"));
+  if (email == "admin" && password == "admin") {
+    alert("Admin User!!!");
+    window.location.href = "index.html";
+  } else {
+    for (let i = 0; i < arr.length; i++) {
+      if (
+        arr[i].userEmail === email  &&
+        arr[i].userPassword === password
+      ) {
+        var name=email[0]+email[1]+email[2]+email[3]+email[4]+email[5]+email[6]+email[7]+email[8]
+     
+        username.push(name)
+        localStorage.setItem("username",JSON.stringify(username));
+        document.getElementById("H-username").innerHTML=username
+
+         flag = true;
+        
+        alert('Login Success');
+        setTimeout(()=>{
+window.location.href = "/index.html"
+        },1000)
+        
+        break;
+      }
+    }
+    if (flag == false) {
+      alert("unregistered user");
+      
+     // isLogin = false;
+     // localStorage.setItem("isLogin", "false");
+    } 
+   // else {
+    //   console.log("registered user");
+    //   document.querySelector("#username").value = "";
+    //   document.querySelector("#password").value = "";
+    //   alert("Login Successful!!!");
+    //   isLogin = true;
+    //   localStorage.setItem("isLogin", "true");
+    //   window.location.href = "Landing.html";
+    // }
+  }
+}
+
+
+
+document.querySelector(".dropbtn").addEventListener("click", function(){
+    window.location.href="/furniture.html"
+  })
+
+document.querySelector("#home").addEventListener("click", function(){
+    window.location.href="/index.html"
+  })
+
+    //search 
+    let search=[]
+document.getElementById("search-Icon").addEventListener("click",function(){
+let value=document.getElementById("searchbox").value.toLowerCase()
+if(value.length!=0){
+search.push(value)
+localStorage.setItem("search",JSON.stringify(search))
+window.location.href="/search.html"
+}
+
+})
+
+</script>
+
+
+
+
+
+
+
+
