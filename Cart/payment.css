@@ -1,0 +1,121 @@
+#parent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    /* height: 100%; */
+    /* width: 100%; */
+}
+/* div{
+    border: 1px solid blue;
+} */
+#payment_option > div{
+    /* height: 80%;
+    width: 70%; */
+    margin-top: -100px;
+    padding-top: 20px;
+}
+#payment_option {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#price_details {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#price_details > div {
+    /* height: 80%; */
+    /* width: 60%; */
+    gap: 10px;
+    padding-top: 20px;
+}
+#price_details > div > div:first-child {
+    /* height: 30%;
+    width: 80%; */
+    margin: auto;
+    margin-bottom: 20px;
+}
+#price_details > div > div:last-child {
+    /* height: 60%;
+    width: 80%; */
+    margin: auto;
+}
+#price_details > div > div:last-child > div {
+    /* background-color: brown; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+#card_date {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+.border {
+    border: 0.5px solid rgb(180, 176, 176);
+    padding: 20px;
+    padding-top: 0px;
+    margin-top: 30px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#card{
+    padding: 50px;
+    margin-top: 30px;
+    border-radius: 10px;
+    border: 0.5px solid rgb(180, 176, 176);
+    width: 400px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#discount {
+    padding: 0px;
+    text-align: center;
+}
+#submit {
+    height: 40px;
+    border: 0px;
+    border-radius: 8px;
+    width: 150px;
+    background-color: rgb(56, 55, 55);
+    color: white;
+}
+#sbmt_div {
+    text-align: center;
+    padding-left: 24%;
+    padding-bottom: 15px;
+}
+input{
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid black;
+    text-align: center;
+}
+select{
+    height: 30px;
+    width: 60px;
+}
+#card > div > input{
+    height: 40px;
+    width: 400px;
+}
+button{
+    height: 40px;
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid black;
+}
+button:hover{
+    background-color: whitesmoke;
+}
+.red{
+    color: red;
+}
+.otp_class{
+    margin-top: 300px;
+    margin-left: 600px;
+    margin-right: 500px;
+    padding: 20px;
+    /* padding-top: 300px;
+    padding-left: 600px; */
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
