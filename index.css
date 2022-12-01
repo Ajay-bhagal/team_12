@@ -1,5 +1,6 @@
 
    #main{position: relative;}
+   .parentpic:hover{cursor:pointer}
    .parentpic{position: absolute;
 top: 10px; left: 20px;}
 #main>img{width: 100%;}
@@ -20,6 +21,7 @@ top: 10px; left: 20px;}
     #main2>img{width: 100%;}
     .main2pic{position: absolute;
     top: 5px; left: 10px;}
+    .main2pic:hover{cursor: pointer;}
     #product2>div{text-align: center;
         display: grid;
         grid-template-columns: repeat(6,1fr);}
@@ -42,6 +44,7 @@ top: 10px; left: 20px;}
      .main3pic{position: absolute;
     top: 5px; left: 10px;}
     #main3>img{width: 100%;}
+    .main3pic:hover{cursor: pointer;}
     #product4>div{display: flex;}
     #product4>h1{text-align: center;
     color: #2f3337;}
@@ -68,7 +71,6 @@ top: 10px; left: 20px;}
     #product5{width: 100%;
     margin: auto;}
     .btn{margin: 30px 42% 45px 45%;}
-    
     #lasthd{display: grid;
     grid-template-columns: repeat(3,1fr);
     text-align: center;}
