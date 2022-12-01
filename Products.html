@@ -481,8 +481,16 @@ function productList(){
         wishlist.setAttribute("id","wishlist");
         var like=document.createElement("i");
         like.setAttribute("class","fa-regular fa-heart");
+        like.setAttribute("id","like");
         like.addEventListener("click",function(){
-            like.setAttribute("class","fa-solid fa-heart");
+            if(document.getElementById("like").className=="fa-regular fa-heart")
+            {
+                like.setAttribute("class","fa-solid fa-heart");
+            }
+           
+            else{
+                like.setAttribute("class","fa-regular fa-heart");
+            }
         });
         
         

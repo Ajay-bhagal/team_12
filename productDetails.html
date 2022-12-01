@@ -14,12 +14,12 @@
     <div id="navbar">
 
     </div>
-<div id="Product_categorization">Home   /  Home Decor   /     Elrene Barcelona Damask Elegant Fabric Tablecloth</div>
+<div id="Product_categorization">Home/Home Decor/Elrene Barcelona Damask Elegant Fabric Tablecloth</div>
     <!--Product Page Body Divison-->
 <div id="Product_Parent">  
 
     <div id="product_image">
-        <img src="https://ak1.ostkcdn.com/images/products/is/images/direct/5d96dcfb00937d7e2fe953425effc662411b7ac4/Elrene-Barcelona-Damask-Fabric-Tablecloth.jpg?imwidth=480&impolicy=medium"/>
+        <img id="pro_img" src="https://ak1.ostkcdn.com/img/mxc/030822-RIUpdate-Dsk.svg?imwidth=1920"/>
     <i>Share this Product:</i>
     <div id="social_Media">
         <div><a href=""><img src="image/email.png" class="logo_image"/></a></div>
@@ -32,7 +32,7 @@
      <p id="Product_name">Elrene Barcelona Damask Elegant Fabric Tablecloth</p>
      <div id="Customer_ratings">
      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyNm3O0L9PWAzL3oGmbsZl_EgQEggF6mlR1w&usqp=CAU" id="rating_image"/>
-      <p>4.5 Stars</p>
+      <p id="rate">4.5 Stars</p>
     </div>
     <p id="Product_price">Sale Starts at INR 1957.63</p>
     <p id="choose_size">Size (8):<b>Choose Size</b></p>
@@ -71,7 +71,7 @@
         </tr>
     </table>
 <div id="ProductCart">
-    <select name="Quantity" id="pquanitiy">
+    <select name="Quantity" id="pquanitiy" onchange="val()">
         <option value="1">Quantity: 1</option>
         <option value="2">Quantity: 2</option>
         <option value="3">Quantity: 3</option>
@@ -92,5 +92,20 @@
 </html>
 
 <script>
+var product_Des=JSON.parse(localStorage.getItem("product_data"));
+    productDescription();
+    function productDescription(){
+        document.getElementById('Product_categorization').textContent="Home  /  Products  /  "+product_Des.category;
+        document.getElementById('pro_img').src = product_Des.image_url ;
+        document.getElementById('Product_name').textContent=product_Des.name;
+        document.getElementById('rate').textContent=product_Des.rating;
+        document.getElementById('Product_price').textContent="Sale Starts at INR  "+product_Des.fprice;
+    
+    };
+    function val() {
+    d = document.getElementById("pquanitiy").value;
+    product_Des.qty=d;
+    }
+
 
 </script>
