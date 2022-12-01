@@ -1,17 +1,18 @@
-var data = [];
-var obj = {
-    id:1,
-    name:"SAFAVIEH California Shag Izat 2-inch Thick Area Rug - 2'3  Runner - Ivory",
-    image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/fa0de7e5f6db966631851fdd3f058a6b965ff170/SAFAVIEH-California-Shag-Izat-2-inch-Thick-Rug.jpg?imwidth=480&impolicy=medium",
-    qty:2,
-    fprice:3063.50,
-    rating:4.5,
-    offer:54,
-    cost:6789.6,
-    category:"Home Decor"
-}
+var data = JSON.parse(localStorage.getItem("cart")) || [];
+// var obj = {
+//     id:1,
+//     name:"SAFAVIEH California Shag Izat 2-inch Thick Area Rug - 2'3  Runner - Ivory",
+//     image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/fa0de7e5f6db966631851fdd3f058a6b965ff170/SAFAVIEH-California-Shag-Izat-2-inch-Thick-Rug.jpg?imwidth=480&impolicy=medium",
+//     qty:2,
+//     fprice:3063.50,
+//     rating:4.5,
+//     offer:54,
+//     cost:6789.6,
+//     category:"Home Decor"
+// }
 
-data.push(obj);
+// data.push(obj);
+//  localStorage.setItem("cart", JSON.stringify(data));
 
 // console.log(data);
 var total_qty = 0;
@@ -37,6 +38,7 @@ function display_price(){
 }
 
 function display_product() {
+    document.getElementById("product_contener").textContent = "";
     total_qty = 0
     total_price = 0;
     total_sell_price = 0;
@@ -45,7 +47,7 @@ function display_product() {
         emt.textContent = "Your Cart is Empty";
         document.getElementById("product_contener").append(emt);
     }else{
-        data.map(function(ele) {
+        data.map(function(ele, index) {
             var name = ele.name;
             var img = ele.image_url;
             var discount = ele.offer;
@@ -116,9 +118,15 @@ function display_product() {
             var a1 = document.createElement("a");
             a1.setAttribute("href", "");
             a1.textContent = "Remove";
+            a1.addEventListener("click", function(){
+                dlet(index);
+            })
             var a2 = document.createElement("a");
             a2.setAttribute("href", "");
             a2.textContent = "Save For Later";
+            a2.addEventListener("click", function(){
+                dlet(index);
+            })
             dlt_div.append(a1, a2);
             prdct_cld2.append(dlt_div);
             
@@ -132,4 +140,13 @@ function display_product() {
 
         })
     }
+}
+
+function dlet(index){
+    // console.log(data);
+    event.preventDefault();
+    data.splice(index, 1);
+    localStorage.setItem("cart", JSON.stringify(data));
+    display_product();
+    display_price();
 }
