@@ -13,7 +13,9 @@
       width: 100%;
    }
    #product1>h1{
-      color: #2f3337;}
+      color: #2f3337;
+      font-family:Arial, Helvetica, sans-serif }
+
    #product1>div{
       display: grid;
       grid-template-columns: repeat(6,0.5fr);
@@ -36,6 +38,8 @@
    }
    .pic h2{
       color: #2f3337;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
    }
     #brand{
       text-align: center;
@@ -45,6 +49,9 @@
    }
     #brand h1{
       color: #2f3337;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 32px;
+      margin-top: 6%;
    }
     #main2{
       position: relative;
@@ -70,10 +77,16 @@
     #product2>h1{
       text-align: center;
       color: #2f3337;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 32px;
+      margin-top: 6%;
    } 
     #product2 h4{
-      color: #837b88;
-      font-size: large;
+      color:#545658;
+      font-size: 18px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 400;
+      text-decoration: none solid rgb(84, 86, 88);
    }  
     #product3>div {
       display: flex;
@@ -81,6 +94,9 @@
     #product3>h1{
       text-align: center;
       color: #2f3337;
+      font-size: 32px;
+      font-family: Arial, Helvetica, sans-serif;
+      margin-top: 5%;
    }
     #product3 img{
       width: 100%; 
@@ -89,16 +105,22 @@
       background-color: #f5f6f7;
       margin: 6px
    }
-     .child3 h2,p{ 
+     .child3 h2{ 
       margin: 20px;
       color: #2f3337;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 24px;
    }
      .child3 p{ 
-      font-size:medium;
-      color: #3e4359;
+      font-size:16px;
+      color: #2F3337;
+      margin: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 400;
    }
      #main3{
       position: relative;
+      margin-top: 6%;
    }
      .main3pic{
       position: absolute;
@@ -116,6 +138,9 @@
     #product4>h1{
       text-align: center;
       color: #2f3337;
+      font-size: 32px;
+      font-family: Arial, Helvetica, sans-serif;
+      margin-top: 40px;
    }
     
     #child4 div{
@@ -123,12 +148,16 @@
       margin: auto;
    }
     #child4 h2{
-      margin: 1% 8% -2% 6%;
+      text-align: center;
       color: #2f3337;
+      font-size: 16px;
+      font-family: Arial, Helvetica, sans-serif;
    }
     #child4 p{
-      font-size: large;
+      font-size: 16;
       color:  #82544d;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
    }
     #product5>div{
       display: flex;
@@ -136,6 +165,9 @@
     #product5>h1{
       text-align: center;
       color:  #2f3337;
+      font-size: 32px;
+      font-family: Arial, Helvetica, sans-serif;
+      margin-top: 5%;
    }
     #child5 div{
       background-color: #f5f6f7;
@@ -148,10 +180,12 @@
       margin: 5px 5px 15px 20px;
       font-size: large; 
       color: #837b88;
+      font-family: Arial, Helvetica, sans-serif;
    }
     #child5 h2{
       margin: 8px 0px 8px 20px;
        color: #2f3337;
+       font-family: Arial, Helvetica, sans-serif;
    }
     #product5 button{
       border-radius: 5px;
@@ -178,15 +212,21 @@
    }
     #lastpart h1{
       color: #2f3337;
+      font-size: 32px;
+      font-family:Arial, Helvetica, sans-serif ;
+      margin-top: 4%;
    }
    #lasthd>div{
       background-color: #f5f6f7;
       margin:10px 10px 10px 10px;
    }
    #lasthd h2{
-      color: #545658;
+      color: #545658 ;
+      font-size: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+      
    }
-   /* @media only screen and (min-width:0px) and (max-width:720px){
+   @media only screen and (min-width:0px) and (max-width:720px){
      .child1{
          grid-template-columns: repeat(3,1fr);
          
@@ -194,4 +234,4 @@
       #childp{
          grid-template-columns: repeat(4,1fr);
       }
-   } */
+   }
