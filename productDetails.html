@@ -71,7 +71,7 @@
         </tr>
     </table>
 <div id="ProductCart">
-    <select name="Quantity" id="pquanitiy" onchange="val()">
+    <select name="Quantity" id="pquanitiy">
         <option value="1">Quantity: 1</option>
         <option value="2">Quantity: 2</option>
         <option value="3">Quantity: 3</option>
@@ -102,10 +102,35 @@ var product_Des=JSON.parse(localStorage.getItem("product_data"));
         document.getElementById('Product_price').textContent="Sale Starts at INR  "+product_Des.fprice;
     
     };
-    function val() {
-    d = document.getElementById("pquanitiy").value;
-    product_Des.qty=d;
+    var cart=JSON.parse(localStorage.getItem("cart"))||[];
+    document.getElementById('AdtoCart').addEventListener("click",function(){
+        var flag=0;
+        cart.map(function(elem)
+    {
+        if(elem.name===product_Des.name)
+        {
+            var quant= document.getElementById('pquanitiy').value;
+            elem.qty=elem.qty+parseInt(quant);
+            
+            flag++;
+           
+        }
+        
+    });
+
+    if(flag===0)
+    {
+            var quant= document.getElementById('pquanitiy').value;
+            product_Des.qty=parseInt(quant);
+            cart.push(product_Des);
     }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+        location.href="products.html";
+});
+    
+
+
 
 
 </script>
