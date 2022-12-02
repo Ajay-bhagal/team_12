@@ -210,3 +210,40 @@ label{
 #form-footer{
     text-align: center;
 }
+@media screen and (max-width: 1100px) {
+    .Shell {
+      width: 70%;
+    }
+  }
+  @media screen and (max-width: 1000px) {
+    .Shell {
+      width: 80%;
+    }
+    .Msg {
+      width: 80%;
+    }
+  }
+  @media screen and (max-width: 900px) {
+    .Shell {
+      width: 90%;
+    }
+  }
+  @media screen and (max-width: 750px) {
+    .Shell {
+      width: 100%;
+    }
+    .Msg {
+      width: 90%;
+    }
+  }
+  @media screen and (max-width: 650px) {
+    .Shell {
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: auto auto;
+      grid-gap: 1%;
+    }
+    .Shell .right{
+      display: none;
+    }
+  }

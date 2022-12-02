@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Navbar</title>
+
   <link rel="stylesheet" href="navbar.css">
   <link rel="icon" href="" sizes="16x16" type="image/png"/>
   <style>
@@ -155,17 +156,6 @@
               <div>Small Space Living</div>
             </div>
           </div>
-          <div>
-            <div class="dropdown-img-cont">
-              <div>
-                <img
-                  src="https://i.postimg.cc/tg7z1Kz4/Warrenton-Boho-Handcrafted-2-Door-Acacia-Wood-Sideboard-by-Christopher-Knight-Home.jpg"
-                  alt=""
-                />
-              </div>
-              <div>extra 15% off</div>
-              <div>Select Furniture by Christopher Knight*</div>
-            </div>
             <div>
               <div class="D-div">More Ways to Shop</div>
               <div class="R-div">Featured Sales</div>
@@ -183,20 +173,3 @@
 </body>
 
 </html>
-<script type="module">
-
-  import navbar from 'C:\Users\ITACHI\.vscode\team_12\navbar.js'
-
-  let navbar_div = document.getElementById("navbar");
-  navbar_div.innerHTML = navbar();
-
-  let sectionDiv = document.querySelector(".section-div > div");
-  sectionDiv.addEventListener("mouseover", function () {
-    let dropDownContainer = document.querySelector(".dropdown-content-part");
-    dropDownContainer.style.display = "flex";
-
-    dropDownContainer.addEventListener("mouseout", function () {
-      dropDownContainer.style.display = "none";
-    });
-  });
-</script>

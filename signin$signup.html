@@ -105,125 +105,69 @@
 </body>
 </html>
 
-<script type="module">
-     
-  import { navigation, Footer } from ""
+<script>
+    var Details=JSON.parse(localStorage.getItem("account-data")) || [];
 
+    document.querySelector("form").addEventListener("submit",signup);
+    
 
-  let l=navigation()
-document.getElementById("navbar").innerHTML=l
-let f=Footer()
-document.getElementById("footer").innerHTML=f
+    function signup(){
+      event.preventDefault();  
+      var userid=document.getElementById("email").value;
+      var password=document.getElementById("create-password").value;
+      var conpassword=document.getElementById("confirm-pass").value;
 
-
-     document.querySelector("#form1").addEventListener("submit", signUp);
-var userDataBase = JSON.parse(localStorage.getItem("userDataBase")) || [];
-var flag = false;
-   let username= JSON.parse(localStorage.getItem("username"))||[];
-
-
-function signUp(event) {
-  
- event.preventDefault();
- console.log(1)
-  let email = document.querySelector("#email").value;
-  let c_password = document.querySelector("#create-pass").value;
-  let password = document.querySelector("#confirm-pass").value;
-//   localStorage.setItem("userName", username);
-  let userData = {
-    userEmail: email,
-    user_c_password: c_password,
-    userPassword: password,
-  };
-  if (userDataBase.length != 0) {
-    let arr = JSON.parse(localStorage.getItem("userDataBase")) || [];
-    for (let i = 0; i < arr.length; i++) {
-      if (arr[i].userEmail === email) {
-        flag = true;
-        break;
+      if(password==conpassword){
+        var obj={
+        name:name,
+        userid:userid,
+            password:password,
+        }
+        Details.push(obj);
+        localStorage.setItem("account-data",JSON.stringify(Details));
+       window.alert("Account Created Succesfully")
+       window.location.href="Login.html"
+      }else{
+            window.alert("Password Miss-match")
       }
     }
-    if (flag) {
-      alert("user already exists!!!");
-    } else {
-      userDataBase.push(userData);
-      localStorage.setItem("userDataBase", JSON.stringify(userDataBase));
-      alert("Signup Successful!!!");
-      window.location.href = "#";
-      document.querySelector("#email").value = "";
-      document.querySelector("#create-pass").value = "";
-      document.querySelector("#confirm-pass").value = "";
-    }
-  } else {
-    userDataBase.push(userData);
-    localStorage.setItem("userDataBase", JSON.stringify(userDataBase));
-    alert("Signup Successful!!!");
-    window.location.href = "#";
-    document.querySelector("#email").value = "";
-    document.querySelector("#create-pass").value = "";
-    document.querySelector("#confirm-pass").value = "";
-  }
-  
-}
-//  signin part start
- document.querySelector("#form2").addEventListener("submit", login);
-function login(event) {
-  event.preventDefault();
-  let email = document.querySelector("#sign-in-email").value;
-  let password = document.querySelector("#password").value;
+    var Details = JSON.parse(localStorage.getItem("account-data")) || [];
 
-  let arr = JSON.parse(localStorage.getItem("userDataBase"));
-  if (email == "admin" && password == "admin") {
-    alert("Admin User!!!");
-    window.location.href = "";
-  } else {
-    for (let i = 0; i < arr.length; i++) {
-      if (
-        arr[i].userEmail === email  &&
-        arr[i].userPassword === password
-      ) {
-        var name=email[0]+email[1]+email[2]+email[3]+email[4]+email[5]+email[6]+email[7]+email[8]
-     
-        username.push(name)
-        localStorage.setItem("username",JSON.stringify(username));
-        document.getElementById("H-username").innerHTML=username
+    document.querySelector("form").addEventListener("click",createAcc);
+    
+        function createAcc(){
+            window.location.href="signin$signup.html";
+        }
 
-         flag = true;
         
-        alert('Login Success');
-        setTimeout(()=>{
-window.location.href = ""
-        },1000)
+    
+        document.querySelector("form").addEventListener("submit",signin);
+    
         
-        break;
-      }
-    }
-    if (flag == false) {
-      alert("unregistered user");
-    } 
-  }
-}
-document.querySelector(".dropbtn").addEventListener("click", function(){
-    window.location.href=""
-  })
+    
+        function signin(){
+            event.preventDefault();
+    
+            var enteredEmail = document.querySelector("#sign-in-email").value;
+            var enteredPass = document.querySelector("#password").value;
+    
+            for(var i=0;i< Details.length;i++){
+    
+                if(Details[i].userid==enteredEmail  &&  Details[i].password==enteredPass){
+                   alert("Login Successfull");
+                     window.location.href="homepage.html";
+                    break;
+                }
+                else{
+                    console.log("Login failed Please fill correct data or create account");
+                    document.querySelector("#sign-in-email").value="";
+                    document.querySelector("#password").value="";
+                }
+            }
+        }
 
-document.querySelector("#home").addEventListener("click", function(){
-    window.location.href=""
-  })
+    </script>
 
-    //search 
-    let search=[]
-document.getElementById("search-Icon").addEventListener("click",function(){
-let value=document.getElementById("searchbox").value.toLowerCase()
-if(value.length!=0){
-search.push(value)
-localStorage.setItem("search",JSON.stringify(search))
-window.location.href=""
-}
-
-})
-
-</script>
 
 
 
