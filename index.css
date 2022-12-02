@@ -1,0 +1,301 @@
+
+   #main{
+   
+      width:100%;
+   }
+   .parentpic:hover{
+      cursor:pointer
+   }
+    .parentpic{
+      
+      width: 100%;
+   } 
+   
+   #product1>h1{
+      color: #2f3337;
+      font-family:Arial, Helvetica, sans-serif }
+
+   #product1>div{
+      display: grid;
+      grid-template-columns: repeat(6,0.5fr);
+   }
+   .child1 img{
+      width: 100%;
+   }
+    #product1{
+      text-align: center; 
+   }
+    .child1 div{
+      margin: 10px;
+   }
+    .pic{
+      position: relative;
+   }
+    .upper{ 
+      position: absolute;
+    top: 5px;left: 10px;
+   }
+   .pic h2{
+      color: #2f3337;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+   }
+    #brand{
+      text-align: center;
+      display: grid;
+      grid-template: repeat(3,1fr);
+      margin-bottom: 30px ;
+   }
+    #brand h1{
+      color: #2f3337;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 32px;
+      margin-top: 6%;
+   }
+    #main2{
+      
+      width: 100%;
+   }
+    
+    .main2pic{
+      width: 100%;
+   }
+    .main2pic:hover{ 
+      cursor: pointer;
+   }
+    #product2>div{
+      text-align: center;
+      display: grid;
+      grid-template-columns: repeat(6,1fr);
+   }
+    #product2 img{
+      width: 100%;
+   } 
+    #product2>h1{
+      text-align: center;
+      color: #2f3337;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 32px;
+      margin-top: 6%;
+   } 
+    #product2 h4{
+      color:#545658;
+      font-size: 18px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 400;
+      text-decoration: none solid rgb(84, 86, 88);
+   }  
+    #product3>div {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+   }
+    #product3>h1{
+      text-align: center;
+      color: #2f3337;
+      font-size: 32px;
+      font-family: Arial, Helvetica, sans-serif;
+      margin-top: 5%;
+   }
+    #product3 img{
+      width: 100%; 
+   }
+    .child3 div{
+      background-color: #f5f6f7;
+      margin: 6px
+   }
+     .child3 h2{ 
+      margin: 20px;
+      color: #2f3337;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 24px;
+   }
+     .child3 p{ 
+      font-size:16px;
+      color: #2F3337;
+      margin: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 400;
+   }
+     #main3{
+      width: 100%;
+   }
+     .main3pic{
+     width: 100%;
+   }
+    
+    .main3pic:hover{
+      cursor: pointer;
+   }
+    #product4>div{
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+   }
+    #product4>h1{
+      text-align: center;
+      color: #2f3337;
+      font-size: 32px;
+      font-family: Arial, Helvetica, sans-serif;
+      margin-top: 40px;
+   }
+    
+    #child4 div{
+      background-color: #f5f6f7;
+      margin: auto;
+   }
+    #child4 h2{
+      text-align: center;
+      color: #2f3337;
+      font-size: 16px;
+      font-family: Arial, Helvetica, sans-serif;
+   }
+    #child4 p{
+      font-size: 16;
+      color:  #82544d;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+   }
+    #product5>div{
+      display: flex;
+      
+   }
+    #product5>h1{
+      text-align: center;
+      color:  #2f3337;
+      font-size: 32px;
+      font-family: Arial, Helvetica, sans-serif;
+      margin-top: 5%;
+   }
+    #child5 div{
+      background-color: #f5f6f7;
+      margin: 0px 10px 0px 10px;
+   }
+    #child5 img{
+      width: 100%;
+   }
+    #child5 p{
+      margin: 5px 5px 15px 20px;
+      font-size: large; 
+      color: #837b88;
+      font-family: Arial, Helvetica, sans-serif;
+   }
+    #child5 h2{
+      margin: 8px 0px 8px 20px;
+       color: #2f3337;
+       font-family: Arial, Helvetica, sans-serif;
+   }
+    #product5 button{
+      border-radius: 5px;
+      background-color: #2f3337;
+      font-size:large; 
+      color:white;
+      padding: 10px 20px 10px 20px;
+   }
+    #product5{
+      width: 100%;
+      margin: auto;
+   }
+    .btn{
+      margin: 30px 42% 45px 45%;
+   }
+    #lasthd{
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      text-align: center;
+   }
+    #lastpart{
+      text-align: center;
+      margin: auto;
+   }
+    #lastpart h1{
+      color: #2f3337;
+      font-size: 32px;
+      font-family:Arial, Helvetica, sans-serif ;
+      margin-top: 4%;
+   }
+   #lasthd>div{
+      background-color: #f5f6f7;
+      margin:10px 10px 10px 10px;
+   }
+   #lasthd h2{
+      color: #545658 ;
+      font-size: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+      
+   }
+   
+   @media only screen and (min-width:461px) and (max-width:700px){
+
+      #product1>div{
+       
+         grid-template-columns: repeat(3,1fr);
+         gap:20px;
+         
+      }
+      #brand{
+         grid-template: repeat(2,1fr);
+         gap: 20px ;
+      }
+      #product2>div{
+         
+         grid-template-columns: repeat(3,1fr);
+         gap: 20px;
+
+
+      }
+      #product3>div {
+         
+         grid-template-columns: repeat(2,1fr);
+         gap: 20px;
+      }
+      #product4>div{
+         
+         grid-template-columns: repeat(2,1fr);
+         gap: 20px;
+      }
+      #lasthd{
+         
+         grid-template-columns: repeat(2,1fr);
+         gap: 20px;
+      }
+
+   }
+   @media only screen and (min-width:0px) and (max-width:460px){
+           
+      #product1>div{
+         
+         grid-template-columns: repeat(2,1fr);
+         gap:20px;
+        
+      }
+      #brand{
+         grid-template: repeat(1,1fr);
+         gap: 20px ;
+      }
+      #product2>div{
+         
+         grid-template-columns: repeat(2,1fr);
+         gap: 20px;
+
+
+      }
+      #product3>div {
+         
+         grid-template-columns: repeat(1,1fr);
+         gap: 20px;
+      }
+      #product4>div{
+         
+         grid-template-columns: repeat(1,1fr);
+         gap: 20px;
+      }
+      #lasthd{
+         
+         grid-template-columns: repeat(1,1fr);
+         gap: 20px;
+      }
+   }
+
+
+
+   
+

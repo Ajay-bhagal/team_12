@@ -2,32 +2,41 @@
 *{
     font-family: 'Anek Devanagari', sans-serif;
 }
-
+#Product_categorization{
+    font-size:15px;
+    color:darkslategray;
+    padding-top:130px;
+    margin-left:50px;
+    
+}
 #Product_Parent{
 display: grid;
 grid-template-columns:40% 60%;
-padding:20px 60px;
+padding: 50px;
 gap:50px;
 }
 
 #product_image img{
     width:100%;
     height:500px;  
-    padding-bottom:30px;
+    
 }
 #product_image img:hover
 {
     transform: scale(1.1);
+    
     
 }
 
 
 #social_Media{
 display: flex;
+padding-top:20px;
 
 }
 #social_Media> div>a{
     border:0px;
+    
     
 }
 #social_Media> div>a>img{
@@ -75,6 +84,7 @@ table{
 td:hover{
     background-color:black;
     color:white;
+    cursor: pointer;
 }
 #size_table > td{
     border-color: slategrey;

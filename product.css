@@ -3,8 +3,10 @@
     font-family: 'Anek Devanagari', sans-serif;
 }
 #first-Section{
+    padding-top:100px;
     font-family: 'Anek Devanagari', sans-serif;
-    font-size: 12px;;
+    font-size: 12px;
+    margin-left:20px;
 }
 #first-Section> h1{
     font-size: 40px;
@@ -17,6 +19,7 @@
 }
 #Sorting{
     text-align: right;
+    margin-right:15px;
 }
 
 #Sorting label{
@@ -30,9 +33,13 @@
 }
 #Categorization{
     display:table-row;
-    position: relative;
+   
+
+    position: sticky;
+  
     
 }
+
 .filter{
     border-style:none;
     font-weight:600;
@@ -62,8 +69,8 @@
     cursor:pointer;
 }
 #parent >div:hover{
-    transform: scale(1.1);
-    background-color:white;
+    border-style: solid;
+    border-color: darkcyan;
 }
 #Product_image{
     width:100%;
@@ -80,6 +87,7 @@
     margin-left:15px;
     margin-top:5px;
     font-family: 'Anek Devanagari', sans-serif;
+    font-size:18px;
 }
 #rating_image{
     width:100px;
@@ -160,14 +168,61 @@ font-weight: bolder;
 #Experience_Section{
     margin-left: 580px;
     margin-top:70px;
+    margin-bottom:70px;
 }
 
 #Experience_Section>p {
     font-family: 'Anek Devanagari', sans-serif;
     font-size:20px;
+
 }
 
 #emoticon{
     font-size: 40px;
     padding-left:30px
 }
+
+@media only screen and (min-width:461px) and (max-width:700px){
+
+    #Product_Section{
+        display: grid;
+        grid-template-columns: 25% 50%;
+        padding:1%;
+        justify-content: center;
+        margin-top:20px;
+    }
+
+    .filter{
+        border-style:none;
+        font-weight:600;
+        font-size: 15px;
+        width:200px;
+        height:40px;
+        border-bottom:groove 0.5px;
+        border-color:whitesmoke;
+    }
+
+    #parent{
+    
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap:15px;
+        width:100%;
+    }
+
+ }
+ @media only screen and (min-width:0px) and (max-width:460px){
+    #parent{
+    
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap:10px;
+        
+    }
+
+    #Product_image{
+        width:100%;
+        height:300px;
+        
+    }
+ }

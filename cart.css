@@ -1,0 +1,130 @@
+/* div{
+    border: 0.5px solid rgb(180, 176, 176);
+} */
+
+body{
+    padding: 40px;
+}
+#parent {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    
+}
+.product {
+    border: 0.5px solid rgb(180, 176, 176);
+    margin: auto;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    margin-bottom: 8px;
+}
+.product img{
+    margin-top: 10px;
+    margin-left: 10px;
+    height: 90%;
+    width: 90%;
+}
+#quantity_p {
+    margin: 1px;
+}
+#delete{
+    margin-top: 20px;
+    margin-bottom: 0px;
+    display: grid;
+    grid-template-columns: 80px 100px;
+    /* border: 0.5px solid rgb(180, 176, 176); */
+}
+#delivery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.delivery_border {
+    padding-left: 10px;
+    margin-right: 20px;
+    border: 0.5px solid rgb(180, 176, 176);
+}
+#sell_price{
+    margin-top: -15px;
+}
+#savings{
+    margin-top: 5px;
+}
+#quantity{
+    width: 60px;
+    height: 30px;
+    text-align: center;
+    border-radius: 5px;
+}
+.red{
+    color: red;
+}
+.line{
+    text-decoration: line-through;
+}
+input{
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid black;
+}
+button{
+    background-color: white;
+    border: 1px solid black;
+    height: 40px;
+    border-radius: 8px;
+}
+
+/* copy part */
+
+#price_details {
+    display: flex;
+    margin-left: 10px;
+    /* align-items: center;
+    justify-content: space-around; */
+}
+#price_details > div {
+    /* height: 80%; */
+    /* width: 60%; */
+    gap: 10px;
+    /* padding-top: 20px; */
+}
+#price_details > div > div:first-child {
+    /* height: 30%;
+    width: 80%; */
+    margin: auto;
+    margin-bottom: 20px;
+}
+#price_details > div > div:last-child {
+    /* height: 60%;
+    width: 80%; */
+    margin: auto;
+}
+#price_details > div > div:last-child > div {
+    /* background-color: brown; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.border {
+    border: 0.5px solid rgb(180, 176, 176);
+    padding: 20px;
+    padding-top: 0px;
+    margin-top: 30px;
+}
+#discount {
+    padding: 0px;
+    text-align: center;
+}
+#sbmt_div {
+    text-align: center;
+    padding-left: 24%;
+    padding-bottom: 15px;
+}
+#submit {
+    height: 40px;
+    border: 0px;
+    border-radius: 8px;
+    width: 150px;
+    background-color: rgb(56, 55, 55);
+    color: white;
+}
+#submit:hover {
+    background-color: black;
+}
