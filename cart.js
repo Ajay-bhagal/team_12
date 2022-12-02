@@ -18,6 +18,9 @@ var data = JSON.parse(localStorage.getItem("cart")) || [];
 var total_qty = 0;
 var total_price = 0;
 var total_sell_price = 0;
+var code_flag = false;
+
+document.getElementById("apply").addEventListener("click", chk_promo);
 
 display_product();
 display_price();
@@ -30,14 +33,45 @@ function display_price(){
     }
     // console.log(document.getElementById("total_mrp"));
     var num = (total_price - total_sell_price).toFixed(2);
-    document.querySelector(".dis1").textContent = num;
-    document.querySelector(".dis2").textContent = num;
-    document.getElementById("total_mrp").textContent = total_price;
-    document.querySelector(".sel1").textContent = total_sell_price;
-    document.querySelector(".sel2").textContent = total_sell_price;
+    total_price = (total_price).toFixed(2);
+    total_sell_price = (total_sell_price).toFixed(2);
+
+    if(code_flag){
+        var dis = total_sell_price/10;
+        document.getElementById("total_mrp").textContent = total_price;
+        document.querySelector(".sel1").textContent = (total_sell_price - dis).toFixed(2);
+        document.querySelector(".sel2").textContent = (total_sell_price - dis).toFixed(2);
+        document.querySelector(".dis1").textContent = (num*1 + dis*1).toFixed(2);
+        document.querySelector(".dis2").textContent = (num*1 + dis*1).toFixed(2);
+        var obj = {
+            discount_price: (num*1 + dis*1).toFixed(2),
+            sel_price: (total_sell_price - dis).toFixed(2),
+            mrp_price: total_price,
+            quantiti: total_qty,
+            p_c: code_flag,
+        }
+        localStorage.setItem("price_data", JSON.stringify(obj));
+    }else{
+        document.getElementById("total_mrp").textContent = total_price;
+        document.querySelector(".sel1").textContent = total_sell_price;
+        document.querySelector(".sel2").textContent = total_sell_price;
+        document.querySelector(".dis1").textContent = num;
+        document.querySelector(".dis2").textContent = num;
+        var obj = {
+            discount_price: num,
+            sel_price: total_sell_price,
+            mrp_price: total_price,
+            quantiti: total_qty,
+            p_c: code_flag,
+        }
+        localStorage.setItem("price_data", JSON.stringify(obj));
+    }
+
+
 }
 
 function display_product() {
+    data = JSON.parse(localStorage.getItem("cart")) || [];
     document.getElementById("product_contener").textContent = "";
     total_qty = 0
     total_price = 0;
@@ -102,6 +136,7 @@ function display_product() {
             prdct_cld2.append(h_sel_val);
             var p_qty = document.createElement("p");
             p_qty.setAttribute("id", "quantity_p");
+            p_qty.textContent = "Quantity";
             prdct_cld2.append(p_qty);
             var select_qty = document.createElement("select");
             select_qty.setAttribute("id", "quantity");
@@ -112,6 +147,14 @@ function display_product() {
                 select_qty.append(optn);
             }
             select_qty.selectedIndex = quantity-1;
+
+            select_qty.addEventListener("change", qty_cng);
+
+            function qty_cng(){
+                var valu = select_qty.value;
+                update_qty(index, valu);
+            }
+
             prdct_cld2.append(select_qty);
             var dlt_div = document.createElement("div");
             dlt_div.setAttribute("id", "delete");
@@ -140,6 +183,27 @@ function display_product() {
 
         })
     }
+}
+
+function chk_promo() {
+    var code = document.getElementById("promo_code").value;
+    if(code == "masai10"){
+        code_flag = true;
+        display_product();
+        display_price();
+    }else{
+        alert("Invalid Code");
+        code_flag = false;
+        display_product();
+        display_price();
+    }
+}
+
+function update_qty(index, valu){
+    data[index].qty = valu;
+    localStorage.setItem("cart", JSON.stringify(data));
+    display_product();
+    display_price();
 }
 
 function dlet(index){
