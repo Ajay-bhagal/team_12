@@ -127,7 +127,7 @@
         Details.push(obj);
         localStorage.setItem("account-data",JSON.stringify(Details));
        window.alert("Account Created Succesfully")
-       window.location.href="index.html"
+       
       }else{
             window.alert("Password Miss-match")
       }
@@ -147,7 +147,7 @@
             AccountDetails.map(function(elem){
                 if(elem.userid===enteredEmail  &&  elem.password===enteredPass){
                     
-                   alert("Login Successfull");
+                   alert("Login Successful");
                    flag++;
                      window.location.href="index.html";
                      
