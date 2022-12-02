@@ -140,11 +140,13 @@
             //window.location.href="signin$signup.html";
        // }
 
-       var AccountDetails = JSON.parse(localStorage.getItem("account-data")) || [];
+       
     
         document.querySelector("#form2").addEventListener("submit",signin);
+       
     var flag=0;
         function signin(){
+            var AccountDetails = JSON.parse(localStorage.getItem("account-data")) || [];
             event.preventDefault();
     
             var enteredEmail = document.querySelector("#sign-in-email").value;
@@ -152,11 +154,12 @@
 
 
             AccountDetails.map(function(elem){
-                if(elem.userid==enteredEmail  &&  elem.password==enteredPass){
-                    flag++;
+                if(elem.userid===enteredEmail  &&  elem.password===enteredPass){
+                    
                    alert("Login Successfull");
+                   flag++;
                      window.location.href="index.html";
-                  
+                     
                 }
             });
     
