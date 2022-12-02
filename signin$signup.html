@@ -25,11 +25,11 @@
                     <div class="password-box">
                         <div >
                             <label for="">Create Password*</label><br><br>
-                            <input type="text" name="password" id="create-password" placeholder="Password"><br>
+                            <input type="password" name="" id="create-password" placeholder="Password"><br>
                         </div><br>
                         <div>
                             <label for="">Confirm Password*</label><br><br>
-                            <input type="text" name="" id="confirm-pass" placeholder="Confirm Password">
+                            <input type="password" name="" id="confirm-pass" placeholder="Confirm Password">
                         </div><br>
                     </div>
                     <div id="Msg">
@@ -133,35 +133,32 @@
     }
     var Details = JSON.parse(localStorage.getItem("account-data")) || [];
 
-    document.querySelector("form").addEventListener("click",createAcc);
+    //document.querySelector("form").addEventListener("click",createAcc);
     
-        function createAcc(){
-            window.location.href="signin$signup.html";
-        }
-
-        
-    
-        document.querySelector("form1").addEventListener("submit",signin);
+        //function createAcc(){
+          //  window.location.href="signin$signup.html";
+        //}
+        document.querySelector("form").addEventListener("submit",signin);
     
         
     
         function signin(){
             event.preventDefault();
     
-            var enteredEmail = document.querySelector("#sign-in-email").value;
-            var enteredPass = document.querySelector("#password").value;
+            var enteredEmail = document.querySelector("sign-in-email").value;
+            var enteredPass = document.querySelector("password").value;
     
             for(var i=0;i< Details.length;i++){
     
                 if(Details[i].userid==enteredEmail  &&  Details[i].password==enteredPass){
                    alert("Login Successfull");
-                     window.location.href="homepage.html";
+                     window.location.href="index.html";
                     break;
                 }
                 else{
                     console.log("Login failed Please fill correct data or create account");
-                    document.querySelector("#sign-in-email").value="";
-                    document.querySelector("#password").value="";
+                    document.querySelector("sign-in-email").value="";
+                    document.querySelector("password").value="";
                 }
             }
         }
