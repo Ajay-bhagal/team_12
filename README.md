@@ -59,15 +59,15 @@
 </ul>
 
 <h2>Sneak Peaks into Website Pages</h2>
-<ul><li>Landing Page(Home page)<li>
+<ul><li>Landing Page(Home page)</li>
 
-<li>Sign up/SignIn Page<li>
+<li>Sign up/SignIn Page</li>
 
-<li>Product Page<li>
+<li>Product Page</li>
 
-<li>Product Description Page<li>
+<li>Product Description Page</li>
 
-<li>Cart Page<li>
+<li>Cart Page</li>
 
-<li>Payment and Order placing Page<li>
+<li>Payment and Order placing Page</li>
 </ul>
