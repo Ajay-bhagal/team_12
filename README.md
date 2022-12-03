@@ -37,7 +37,7 @@
 <li>Click on the product you wish to buy. It will redirect you to Product deatils page</li>
 <li>Choose the size and Color along with quantity and click on add to Cart Button</li>
 <li>check the cart, change quantity if you wish and add promocode. click on Checkout button to proceed for the Payment Page<li>
-<li>Add the card Details and The Otp, once Otp is verified, you will get an alert of order placed</li></ol?
+<li>Add the card Details and The Otp, once Otp is verified, you will get an alert of order placed</li></ol>
 
 
 
