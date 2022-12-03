@@ -28,10 +28,10 @@
               </div>
               <div class="class-input">
                 <div>
-                  <input type="text" placeholder="Search... everthing you find ships for free" />
+                  <input type="text" placeholder="Search... everthing you find ships for free" id="Searchitem"/>
                 </div>
                 <div>
-                <img src="https://i.postimg.cc/tgWqzB8p/Search-1.png alt="">
+                <img src="https://i.postimg.cc/tgWqzB8p/Search-1.png alt=" onclick="SearchPro()">
               </div>
               </div>
               <div id="account1" class="class-account class-account-common">
@@ -837,4 +837,15 @@ function productList(list_product){
         document.getElementById("parent").append(div);
     });
 }
+
+function SearchPro()
+  {
+      var SelectedProducts=document.querySelector("#Searchitem").value;
+      
+      var filteredProduct=product.filter(function(elem){
+          return elem.category===SelectedProducts;
+      });
+      productList(filteredProduct);
+      
+  }
     </script>
