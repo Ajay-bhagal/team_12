@@ -59,15 +59,19 @@
 </ul>
 
 <h2>Sneak Peaks into Website Pages</h2>
-<ul><li>Landing Page(Home page)</li>
+<ul><li><h4>Landing Page(Home page)</h4> <br>
+<img src="https://miro.medium.com/max/720/1*9SI7XrHxYKOv4W9LZ27WbQ.webp">
+<img src="https://miro.medium.com/max/720/1*fDXxfmII8V1tHASF6XQ5Ig.webp"></li>
 
-<li>Sign up/SignIn Page</li>
 
-<li>Product Page</li>
-
-<li>Product Description Page</li>
-
-<li>Cart Page</li>
-
-<li>Payment and Order placing Page</li>
+<li><h4>Sign up/SignIn Page</h4> <br>
+<img src="https://miro.medium.com/max/720/1*_jtnBeT7oRCcl0MGqlqezg.webp"></li>
+<li><h4>Product Page</h4> <br>
+<img src="https://miro.medium.com/max/720/1*jkGfBPCHoV8abVaZWvkEUA.webp"></li>
+<li><h4>Product Description</h4> <br>
+<img src="https://miro.medium.com/max/720/1*ytHenFNneqAP-TkYRqyjWA.webp"></li>
+<li><h4>Cart page</h4> <br>
+<img src="https://miro.medium.com/max/720/1*EJk3yejsSKZDrE9jjZvinQ.webp"></li>
+<li><h4>Payment and Order placing Page</h4> <br>
+<img src="https://miro.medium.com/max/720/1*UbXI9qGQw8mjeQnQ9TmwUA.webp"></li>
 </ul>
