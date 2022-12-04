@@ -1,7 +1,7 @@
 /* div{
     border: 0.5px solid rgb(180, 176, 176);
 } */
-
+#heading{margin-top: 8%;}
 body{
     padding: 40px;
 }
@@ -27,6 +27,7 @@ body{
     margin: 1px;
 }
 #delete{
+    
     margin-top: 20px;
     margin-bottom: 0px;
     display: grid;
@@ -53,6 +54,7 @@ body{
     height: 30px;
     text-align: center;
     border-radius: 5px;
+    
 }
 .red{
     color: red;
