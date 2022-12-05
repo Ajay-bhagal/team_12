@@ -124,7 +124,7 @@ function display_product() {
             var dlvr_div_cld = document.createElement("div");
             dlvr_div_cld.setAttribute("class", "delivery_border");
             var h_dlvr_dtls = document.createElement("h4");
-            h_dlvr_dtls.textContent = "Delivery Estimate: Friday, Dec 2";
+            h_dlvr_dtls.textContent = "Delivery Estimate: Wednesday, Dec 7";
             dlvr_div_cld.append(h_dlvr_dtls);
             dlvr_div.append(dlvr_div_cld);
             prdct_cld2.append(dlvr_div);
