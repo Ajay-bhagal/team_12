@@ -357,7 +357,8 @@ var product=[
     rating:4.5,
     offer:30,
     cost:6789.6,
-    category:"Home Decor"
+    category:"Home Decor",
+    ptype:"rugs",
 },
 {
     id:2,
@@ -390,7 +391,8 @@ var product=[
     rating:"4.5",
     offer:20,
     cost:2201,
-    category:"Home Decor"
+    category:"Home Decor",
+    ptype:"rugs",
 },
 {
     id:5,
@@ -401,7 +403,8 @@ var product=[
     rating:4.5,
     offer:50,
     cost:16238,
-    category:"furniture"
+    category:"furniture",
+    ptype:"Bed",
 },
 {
     id:6,
@@ -434,7 +437,8 @@ var product=[
     rating:"4.5",
     offer:10,
     cost:2059,
-    category:"Home Decor"
+    category:"Home Decor",
+    ptype:"rugs",
 },
 {
     id:9,
@@ -445,7 +449,8 @@ var product=[
     rating:3.5,
     offer:35,
     cost:15931,
-    category:"furniture"
+    category:"furniture",
+    ptype:"Bed",
 },
 {
     id:10,
@@ -467,7 +472,8 @@ var product=[
     rating:4.5,
     offer:30,
     cost:2106,
-    category:"Home Decor"
+    category:"Home Decor",
+    ptype:"rugs"
 },
 {
     id:12,
@@ -522,7 +528,8 @@ var product=[
     rating:4.5,
     offer:15,
     cost:2398,
-    category:"Home Decor"
+    category:"Home Decor",
+    ptype:"rugs",
 },
 {
     id:17,
@@ -544,7 +551,8 @@ var product=[
     rating:4.5,
     offer:20,
     cost:6299,
-    category:"Home Decor"
+    category:"Home Decor",
+    ptype:"wall Decor",
 },
 {
     id:19,
@@ -555,7 +563,8 @@ var product=[
     rating:3.5,
     offer:20,
     cost:3558,
-    category:"Home Decor"
+    category:"Home Decor",
+    ptype:"rugs",
 },
 {
     id:20,
@@ -599,7 +608,8 @@ var product=[
     rating:4,
     offer:10,
     cost:22969,
-    category:"furniture"
+    category:"furniture",
+    ptype:"Bed",
 },
 {
     id:24,
@@ -632,7 +642,8 @@ var product=[
     rating:4,
     offer:10,
     cost:11858,
-    category:"Home Decor"
+    category:"Home Decor",
+    ptype:"wall Decor",
 },
 {
     id:27,
@@ -666,6 +677,7 @@ var product=[
     offer:25,
     cost:3031,
     category:"Home Decor",
+    ptype:"rugs",
 },
 {
     id:30,
@@ -676,7 +688,8 @@ var product=[
     rating:"4.5",
     offer:20,
     cost:2201,
-    category:"Home Decor"
+    category:"Home Decor",
+    ptype:"wall Decor",
 },
 ];
 
@@ -843,7 +856,7 @@ function SearchPro()
       var SelectedProducts=document.querySelector("#Searchitem").value;
       
       var filteredProduct=product.filter(function(elem){
-          return elem.category===SelectedProducts;
+          return (elem.category===SelectedProducts || elem.ptype===SelectedProducts);
       });
       productList(filteredProduct);
       

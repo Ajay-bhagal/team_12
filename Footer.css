@@ -50,9 +50,12 @@ p{
     display: flex;
     align-items:center;
    margin-left:400px;
+   
 }
-#cmenu{
+#cmenu a{
     margin-left:30px;
+    color:white;
+    text-decoration: none;
 }
 
 #flag{
