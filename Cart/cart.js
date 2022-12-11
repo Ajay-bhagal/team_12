@@ -32,20 +32,20 @@ function display_price(){
         document.getElementById("itm").textContent = "";
     }
     // console.log(document.getElementById("total_mrp"));
-    var num = (total_price - total_sell_price).toFixed(2);
-    total_price = (total_price).toFixed(2);
-    total_sell_price = (total_sell_price).toFixed(2);
+    var num = Math.floor(total_price - total_sell_price);
+    total_price = Math.floor(total_price);
+    total_sell_price = Math.floor(total_sell_price);
 
     if(code_flag){
         var dis = total_sell_price/10;
         document.getElementById("total_mrp").textContent = total_price;
-        document.querySelector(".sel1").textContent = (total_sell_price - dis).toFixed(2);
-        document.querySelector(".sel2").textContent = (total_sell_price - dis).toFixed(2);
-        document.querySelector(".dis1").textContent = (num*1 + dis*1).toFixed(2);
-        document.querySelector(".dis2").textContent = (num*1 + dis*1).toFixed(2);
+        document.querySelector(".sel1").textContent = Math.floor(total_sell_price - dis);
+        document.querySelector(".sel2").textContent = Math.floor(total_sell_price - dis);
+        document.querySelector(".dis1").textContent = Math.floor(num*1 + dis*1);
+        document.querySelector(".dis2").textContent = Math.floor(num*1 + dis*1);
         var obj = {
-            discount_price: (num*1 + dis*1).toFixed(2),
-            sel_price: (total_sell_price - dis).toFixed(2),
+            discount_price: Math.floor(num*1 + dis*1),
+            sel_price: Math.floor(total_sell_price - dis),
             mrp_price: total_price,
             quantiti: total_qty,
             p_c: code_flag,
@@ -140,7 +140,7 @@ function display_product() {
             prdct_cld2.append(p_qty);
             var select_qty = document.createElement("select");
             select_qty.setAttribute("id", "quantity");
-            for(var i=1; i<=10; i++){
+            for(var i=1; i<=20; i++){
                 var optn = document.createElement("option");
                 optn.setAttribute("value", i);
                 optn.textContent = i;
@@ -188,6 +188,7 @@ function display_product() {
 function chk_promo() {
     var code = document.getElementById("promo_code").value;
     if(code == "masai10"){
+        alert("Congratulations, You avail 10% Discount");
         code_flag = true;
         display_product();
         display_price();

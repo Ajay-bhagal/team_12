@@ -37,6 +37,9 @@ if(data == 0 || data.quantiti == 0){
             document.getElementById("confirm").addEventListener("click", actn);
 
             function actn(){
+                var done = [];
+                localStorage.setItem("cart", JSON.stringify(done));
+                localStorage.setItem("price_data", JSON.stringify(done));
                 var otp_n = document.getElementById("otp_val").value;
                 if(otp_n == "1234"){
                     alert("Order Successfull");
@@ -65,13 +68,12 @@ if(data == 0 || data.quantiti == 0){
 
     function display_price(){
 
-        document.querySelector(".dis1").textContent = (discount*1 + dis*1).toFixed(2);
-        document.querySelector(".dis2").textContent = (discount*1 + dis*1).toFixed(2);
+        document.querySelector(".dis1").textContent = Math.floor(discount*1 + dis*1);
+        document.querySelector(".dis2").textContent = Math.floor(discount*1 + dis*1);
         document.getElementById("itm").textContent = "(" + quantity + ")";
         document.getElementById("mrp").textContent = mrp;
-        document.querySelector(".sell_p1").textContent = (sell_price - dis).toFixed(2);
-        document.querySelector(".sell_p2").textContent = (sell_price - dis).toFixed(2);
+        document.querySelector(".sell_p1").textContent = Math.floor(sell_price - dis);
+        document.querySelector(".sell_p2").textContent = Math.floor(sell_price - dis);
     }
 }
-
 
